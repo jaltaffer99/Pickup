@@ -13,10 +13,11 @@ class User {
     var name: String
     var userName: String
     var passWord: String
+    var userId: Int
 
     //MARK: Initialization
     
-    init?(name: String, userName: String, passWord: String) {
+    init?(name: String, userName: String, passWord: String, userId:Int?) {
         // Initialize stored properties.
         if name.isEmpty {
             return nil
@@ -30,6 +31,10 @@ class User {
             return nil
         }
         self.passWord = passWord
+        if userId == nil {
+            return nil
+        }
+        self.userId = userId!
         
     }
 }

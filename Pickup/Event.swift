@@ -14,13 +14,13 @@ class Event {
     var name: String
     var details: String
     var location: String
-    var owner: User
-    var attendees: [User]
+    var owner: Int
+    var attendees: [Int]
     var date: Date
     
     
     //MARK: Initialization
-    init?(id: Int?, name: String, details: String, location: String, owner:User?, attendees: [User], date: Date?) {
+    init?(id: Int?, name: String, details: String, location: String, owner:Int?, attendees: [Int], date: Date?) {
         // Initialize stored properties.
         if (id == nil) {
             return nil

@@ -59,6 +59,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: Actions
+    @IBAction func userRegistrationButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "createAccountSegue", sender: nil)
+    }
     @IBAction func logInUserButton(_ sender: UIButton) {
         let email = userNameTextField.text; print(email ?? "no username given")
         let password = passWordTextField.text; print(password ?? "no password given")

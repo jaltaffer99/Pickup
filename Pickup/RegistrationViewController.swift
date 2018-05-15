@@ -49,7 +49,8 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     // MARK: Actions
     @IBAction func createAccountButton(_ sender: Any) {
         if userNameTextField!.text != "" || nameTextField!.text  != "" {
-            let newUser = confirmPassWordTextField.text == passWordTextField.text ? User(name: nameTextField.text!, userName: userNameTextField.text!, passWord: passWordTextField.text!) : nil
+            //userId must be incremented, to be completed later
+            let newUser = confirmPassWordTextField.text == passWordTextField.text ? User(name: nameTextField.text!, userName: userNameTextField.text!, passWord: passWordTextField.text!,userId: 0) : nil
             //Add user to Firebase
             Auth.auth().createUser(withEmail: userNameTextField.text!, password: passWordTextField.text!) { (authResult, error) in
                 // ...
